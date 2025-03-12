@@ -9,7 +9,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80, // Sesuaikan dengan tinggi header
+                top: targetElement.offsetTop - 130, // Sesuaikan dengan tinggi header
                 behavior: 'smooth'
             });
         }
@@ -52,7 +52,7 @@ function submitForm(event) {
     let name = document.getElementById("name").value; // Ambil nama yang diisi user
     let birthDate = document.getElementById("birth-date").value; // Ambil tanggal lahir
     let message = document.getElementById("message").value; // Ambil pesan yang diinput user
-    let gender = document.querySelector('input[name="gender"]:checked'); // Cek jenis kelamin yang dipilih
+    let gender = document.querySelector('input[name="gender"]:checked'); // Cek jenis kelamin yang telah dipilih
 
     // Ambil waktu sekarang dalam format yang gampang dibaca
     let currentTime = new Date().toLocaleString();
@@ -61,9 +61,9 @@ function submitForm(event) {
     let genderValue = gender ? gender.value : "Tidak Dipilih";
 
     // Masukin hasil input ke dalam message-result
-    document.getElementById("current-time").textContent = `Current time: ${currentTime}`;
-    document.getElementById("result-name").textContent = `Nama: ${name}`;
-    document.getElementById("result-birth").textContent = `Tanggal Lahir: ${birthDate}`;
-    document.getElementById("result-gender").textContent = `Jenis Kelamin: ${genderValue}`;
-    document.getElementById("result-message").textContent = `Pesan: ${message}`;
+    document.getElementById("current-time").textContent = `Current time : ${currentTime}`;
+    document.getElementById("result-name").textContent = `Nama : ${name}`;
+    document.getElementById("result-birth").textContent = `Tanggal Lahir : ${birthDate}`;
+    document.getElementById("result-gender").textContent = `Jenis Kelamin : ${genderValue}`;
+    document.getElementById("result-message").textContent = `Pesan : ${message}`;
 }

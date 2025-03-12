@@ -1,9 +1,11 @@
-/* file css */
+/* File Css */
 
+/* Bikin efek scroll jadi smooth, biar enak pas pindah-pindah halaman */
 html {
     scroll-behavior: smooth;
 }
 
+/* Reset bawaan browser, biar stylingnya konsisten */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +14,8 @@ html {
     background-color: white;
 }
 
-/* Styling Header */
+/* === Styling Header === */
+/* Header fixed di atas, jadi tetep kelihatan saat scroll */
 .main-header {
     position: fixed; 
     top: 0;
@@ -30,13 +33,15 @@ html {
     gap: 10px;
 }
 
-/* Logo dan Nama */
+/* === Styling Logo dan Nama === */
+/* Logo + nama biar sejajar */
 .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+/* Styling logo bulat */
 .main-logo {
     width: 50px;
     height: 50px;
@@ -46,13 +51,14 @@ html {
     border-radius: 50%;
 }
 
+/* Nama di samping logo */
 .main-logo-name {
     font-weight: 600;
     font-size: 20px;
     color: darkslategray;
 }
 
-/* Navigasi */
+/* === Styling Navigasi === */
 nav {
     display: flex;
     justify-content: center;
@@ -61,6 +67,7 @@ nav {
     flex-wrap: wrap; 
 }
 
+/* Link menu navigasi */
 nav > a {
     width: 120px;
     height: 40px;
@@ -74,13 +81,14 @@ nav > a {
     justify-content: center;
 }
 
+/* Efek hover biar menarik */
 nav > a:hover {
     background-color: skyblue;
     color: white;
     transition-duration: 250ms;
 }
 
-/* Konten Utama */
+/* === Styling Main-banner === */
 .main-banner {
     display: flex;
     flex-direction: column;
@@ -88,20 +96,23 @@ nav > a:hover {
     max-width: 1200px;
     height: auto;
     padding: 10px 16px;
-    margin: 130px 65px 50px auto;
+    margin: 120px 65px 50px auto;
 }
 
+/* Judul di banner utama */
 .banner-title {
     font-size: 20px;
     margin-bottom: 20px;
     color: black;
 }
 
+/* Paragraf di banner */
 .banner-title>p {
     font-size: medium;
     margin-top: 10px;
 }
 
+/* Container buat gambar di banner */
 .banner-container {
     width: 100%;
     max-width: 1366px;
@@ -111,6 +122,7 @@ nav > a:hover {
     border-radius: 10px;
 }
 
+/* Gambar banner yang bisa di slide otomatis */
 .banner-img {
     width: 1366px;
     height: 578px;
@@ -122,10 +134,12 @@ nav > a:hover {
     transition: opacity 1s ease-in-out;
 }
 
+/* Biar gambar yang aktif kelihatan */
 .banner-img.active {
     opacity: 1;
 }
 
+/* === Styling Profile === */
 .profile-title {
     padding: 0 100px;
     margin: 50px auto;
@@ -133,11 +147,13 @@ nav > a:hover {
     color: black;
 }
 
+/*  Paragraf di profile */
 .profile-title>p {
     margin-top: 8px;
     font-size: medium;
 }
 
+/* Container buat profile */
 .profile-container {
     width: 80%;
     height: auto;
@@ -148,6 +164,7 @@ nav > a:hover {
     margin: 50px auto;
 }
 
+/* Card buat profile */
 .profile-card {
     width: 100%;
     display: flex;
@@ -157,7 +174,7 @@ nav > a:hover {
     text-align: center;
 }
 
-
+/* Gambar profile */
 .profile-img {
     width: 100px;
     height: 100px;
@@ -168,6 +185,7 @@ nav > a:hover {
     border-radius: 50%;
 }
 
+/* Nama profile */
 .profile-text {
     width: 100px;
     margin-top: 10px;
@@ -175,6 +193,7 @@ nav > a:hover {
     font-size: 16px;
 }
 
+/* Judul di Achievement */
 .achievement-title {
     padding: 0 100px;
     margin: 50px auto;
@@ -182,11 +201,13 @@ nav > a:hover {
     color: black;
 }
 
+/* Paragraf di Achievement */
 .achievement-title>p {
     margin-top: 8px;
     font-size: medium;
 }
 
+/* Container buat Achievement */
 .achievement-container {
     display: flex;
     text-align: center;
@@ -198,13 +219,7 @@ nav > a:hover {
     height: 300px;
 }
 
-
-.main-footer>span {
-    font-size: medium;
-    font-weight: bold;
-    color: darkslategray;
-}
-
+/* === Styling Message === */
 .message-title {
     padding: 0 100px;
     margin: 50px auto;
@@ -212,11 +227,13 @@ nav > a:hover {
     color: black;
 }
 
+/* Paragraf di Message */
 .message-title>p {
     margin-top: 8px;
     font-size: medium;
 }
 
+/* Container buat Message */
 .message-container {
     display: flex;
     justify-content: space-between;
@@ -227,11 +244,13 @@ nav > a:hover {
     margin-bottom: 100px;
 }
 
+/* Form untuk kirim pesan */
 .message-form {
     width: 560px;
     height: 300px;
 }
 
+/* Form buat kirim pesan */
 .message-form>form {
     width: 100%;
     max-width: 600px;
@@ -242,17 +261,20 @@ nav > a:hover {
     box-shadow: 0px 0px 30px white;
 }
 
+/* === Styling Form Group === */
 .form-group {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
 }
 
+/* Label buat kirim pesan */
 .form-group>label {
     width: 150px;
     font-weight: bold;
 }
 
+/* Input buat kirim pesan */
 .form-group>input,
 .form-group>textarea {
     flex: 1;
@@ -261,17 +283,20 @@ nav > a:hover {
     border-radius: 5px;
 }
 
+/* Textarea buat kirim pesan */
 .form-group>textarea {
     height: 100px;
     resize: vertical;
 }
 
+/* Radio Group buat kirim pesan */
 .radio-group {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+/* Tombol submit buat kirim pesan */
 .message-form>form>input[type="submit"] {
     width: 100%;
     cursor: pointer;
@@ -285,10 +310,12 @@ nav > a:hover {
     box-shadow: skyblue 0px 0px 10px;
 }
 
+/* Tombol submit ketika di hover akan berubah warnanya */
 .message-form>form>input[type="submit"]:hover {
     background-color: steelblue;
 }
 
+/* === Styling message-result === */
 .message-result {
     margin-left: 40px;
     width: 600px;
@@ -308,10 +335,12 @@ nav > a:hover {
     padding: 10px 20px 20px 20px;
 }
 
+/* === Styling Footer === */
 .main-footer {
     width: 100%;
     max-width: 100%;
     padding: 20px 40px;
+    margin-top: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -319,6 +348,13 @@ nav > a:hover {
     box-shadow: 0px 0px 40px rgba(3, 153, 158, 0.486);
 }
 
+.main-footer>span {
+    font-size: medium;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+/* === Responsiveness === */
 /* Untuk tablet */
 @media (max-width: 768px) {
     .main-header {
