@@ -1,0 +1,397 @@
+/* file css */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+}
+
+/* Styling Header */
+.main-header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 40px;
+    box-shadow: 0px 0px 40px rgba(3, 153, 158, 0.486);
+    gap: 10px;
+}
+
+/* Logo dan Nama */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-logo {
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/logo-profile/logo-sma.png);
+    background-position: center;
+    background-size: cover;    
+    border-radius: 50%;
+}
+
+.main-logo-name {
+    font-weight: 600;
+    font-size: 20px;
+    color: darkslategray;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    flex-wrap: wrap; 
+}
+
+nav > a {
+    width: 120px;
+    height: 40px;
+    background-color:cadetblue;
+    border-radius: 20px;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav > a:hover {
+    background-color: skyblue;
+    color: white;
+    transition-duration: 250ms;
+}
+
+/* Konten Utama */
+.main-banner {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    padding: 10px 16px;
+    margin: 130px 65px 50px auto;
+}
+
+.banner-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.banner-title>p {
+    font-size: medium;
+    margin-top: 10px;
+}
+
+.banner-container {
+    width: 100%;
+    max-width: 1366px;
+    height: 578px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.banner-img {
+    width: 1366px;
+    height: 578px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner-img.active {
+    opacity: 1;
+}
+
+.profile-title {
+    padding: 0 100px;
+    margin: 50px auto;
+    font-size: 18px;
+    color: black;
+}
+
+.profile-title>p {
+    margin-top: 8px;
+    font-size: medium;
+}
+
+.profile-container {
+    width: 80%;
+    height: auto;
+    max-width: 1200px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.profile-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-image: url(../assets/logo-profile/profile.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.profile-text {
+    width: 100px;
+    margin-top: 10px;
+    font-weight: inherit;
+    font-size: 16px;
+}
+
+.achievement-title {
+    padding: 0 100px;
+    margin: 50px auto;
+    font-size: 18px;
+    color: black;
+}
+
+.achievement-title>p {
+    margin-top: 8px;
+    font-size: medium;
+}
+
+.achievement-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    border: 1px solid black;
+    width: 600px;
+    height: 300px;
+}
+
+
+.main-footer>span {
+    font-size: medium;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.message-title {
+    padding: 0 100px;
+    margin: 50px auto;
+    font-size: 18px;
+    color: black;
+}
+
+.message-title>p {
+    margin-top: 8px;
+    font-size: medium;
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px auto;
+    padding: 0 100px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 100px;
+}
+
+.message-form {
+    width: 560px;
+    height: 300px;
+}
+
+.message-form>form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px white;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.form-group>label {
+    width: 150px;
+    font-weight: bold;
+}
+
+.form-group>input,
+.form-group>textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group>textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.message-form>form>input[type="submit"] {
+    width: 100%;
+    cursor: pointer;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: skyblue 0px 0px 10px;
+}
+
+.message-form>form>input[type="submit"]:hover {
+    background-color: steelblue;
+}
+
+.message-result {
+    margin-left: 40px;
+    width: 600px;
+    height: 372px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.result-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-text>span {
+    padding: 10px 20px 20px 20px;
+}
+
+.main-footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 0px 40px rgba(3, 153, 158, 0.486);
+}
+
+/* Untuk tablet */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-banner {
+        width: 100%;
+        margin: 100px auto;
+        padding: 10px;
+    }
+
+    .profile-container,
+    .achievement-container,
+    .message-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .message-form,
+    .message-result {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Untuk smartphone */
+@media (max-width: 480px) {
+    .main-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-logo-name {
+        font-size: 16px;
+    }
+
+    nav > a {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .main-banner {
+        margin: 100px auto;
+        padding: 10px;
+        width: 95%;
+    }
+
+    .banner-title {
+        font-size: 16px;
+    }
+
+    .profile-title,
+    .achievement-title,
+    .message-title {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .profile-container,
+    .achievement-container,
+    .message-container {
+        flex-direction: column;
+    }
+
+    .message-form {
+        width: 100%;
+    }
+}

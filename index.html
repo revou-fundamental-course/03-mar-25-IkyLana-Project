@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Import font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <title>Web school by Rizkyy</title>
+    
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header utama -->
+    <header class="main-header">
+        <div class="logo-container">
+            <div class="main-logo"></div> <!-- Tempat logo sekolah -->
+            <div class="main-logo-name">
+                <span>SMA Mandiri Bima Sakti</span> <!-- Nama sekolah -->
+            </div>
+        </div>
+        <nav> <!-- Navigasi menu -->
+            <a href="#home">Home</a>
+            <a href="#our-profile">Our Profile</a>
+            <a href="#achievement">Achievement</a>
+            <a href="#message-us">Message Us</a>
+        </nav>
+    </header>
+
+    <!-- Konten utama -->
+    <main>
+        <!-- Banner utama -->
+        <section id="home">
+            <div class="main-banner">
+                <div class="banner-title">
+                    <h1>Hi everyone, Welcome to SMA Mandiri Bima Sakti</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="banner-container">
+                    <div class="banner-img"></div> <!-- Tempat gambar banner -->
+                </div>
+            </div>
+        </section>
+
+        <hr style="border: 2px solid black;"> <!-- Garis pemisah -->
+
+        <!-- Profil guru -->
+        <section id="our-profile">
+            <div class="profile-title">
+                <h1>Our Profile Teacher</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="profile-container">
+                <!-- Kartu profile guru -->
+                <div class="profile-card">
+                    <div class="profile-img"></div> <!-- Gambar guru -->
+                    <div class="profile-text">
+                        <span>Professional Teacher</span> <!-- Nama jabatan -->
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-img"></div>
+                    <div class="profile-text">
+                        <span>Supervisor Teacher</span>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-img"></div>
+                    <div class="profile-text">
+                        <span>Senior Teacher</span>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-img"></div>
+                    <div class="profile-text">
+                        <span>Junior Teacher</span>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-img"></div>
+                    <div class="profile-text">
+                        <span>Beginner Teacher</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr style="border: 2px solid black;"> <!-- Garis pemisah -->
+
+        <!-- Prestasi -->
+        <section id="achievement">
+            <div class="achievement-title">
+                <h1>Achievement</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="achievement-container">
+                <div class="content-achievement">
+                    <div class="achievement-text">
+                        <h3>Best Teacher</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr style="border: 2px solid black;"> <!-- Garis pemisah -->
+
+        <!-- Form untuk kirim pesan -->
+        <section id="message-us">
+            <div class="message-title">
+                <h1>Message Us</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="message-container">
+                <div class="message-form">
+                    <form onsubmit="submitForm(event)"> <!-- Formulir dengan event submit -->
+                        <div class="form-group">
+                            <label for="name">Nama <span style="padding-left: 80px;">:</span></label>
+                            <input type="text" id="name" placeholder="Nama" required style="font-size: 14px; font-weight: semibold;">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="birth-date">Tempat Lahir <span style="padding-left: 24px;">:</span></label>
+                            <input type="date" id="birth-date" placeholder="Tempat Lahir" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Jenis Kelamin <span style="padding-left: 17px;">:</span></label>
+                            <div class="radio-group">
+                                <input type="radio" id="laki" name="gender" value="Laki-Laki" required>
+                                <label for="laki">Laki-Laki</label>
+                                <input type="radio" id="perempuan" name="gender" value="Perempuan">
+                                <label for="perempuan">Perempuan</label>
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="message">Pesan <span style="padding-left: 77px;">:</span></label>
+                            <textarea id="message" placeholder="Masukkan pesan..." style="font-size: 14px; font-weight: semibold;" required></textarea>
+                        </div>
+    
+                        <input type="submit" value="Submit"> <!-- Tombol submit -->
+                    </form>
+                </div>
+                <div class="message-result">
+                    <div class="result-text">
+                        <!-- Tempat tampilan hasil form setelah di-submit -->
+                        <span id="current-time">Current time :</span>
+                        <span id="result-name">Nama :</span>
+                        <span id="result-birth">Tanggal Lahir :</span>
+                        <span id="result-gender">Jenis Kelamin :</span>
+                        <span id="result-message">Pesan :</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="main-footer">
+            <span>Created By Muhammad Rizky Maulana.</span> <!-- Credit pembuat -->
+        </div>
+    </footer>
+
+    <!-- Link ke file JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
