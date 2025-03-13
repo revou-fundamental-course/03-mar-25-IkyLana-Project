@@ -384,6 +384,7 @@ html {
 /* Untuk smartphone */
 @media (max-width: 480px) {
     .main-header {
+        width: 100%;
         flex-direction: column;
         padding: 15px;
         gap: 10px;
