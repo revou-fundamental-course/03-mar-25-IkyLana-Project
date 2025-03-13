@@ -21,7 +21,6 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 100%;
     background-color: white;
     z-index: 1000;
     display: flex;
@@ -30,15 +29,6 @@ html {
     flex-wrap: wrap;
     padding: 15px 40px;
     box-shadow: 0px 0px 40px rgba(3, 153, 158, 0.486);
-    gap: 10px;
-}
-
-/* === Styling Logo dan Nama === */
-/* Logo + nama biar sejajar */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 /* Styling logo bulat */
@@ -51,6 +41,13 @@ html {
     border-radius: 50%;
 }
 
+/* Container buat logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* Nama di samping logo */
 .main-logo-name {
     font-weight: 600;
@@ -58,20 +55,19 @@ html {
     color: darkslategray;
 }
 
-/* === Styling Navigasi === */
-nav {
+/* Styling Navigasi */
+.nav-menu {
     display: flex;
     justify-content: center;
     text-align: center;
     gap: 16px;
-    flex-wrap: wrap; 
 }
 
-/* Link menu navigasi */
-nav > a {
+/* Link menu */
+.nav-menu a {
     width: 120px;
     height: 40px;
-    background-color:cadetblue;
+    background-color: cadetblue;
     border-radius: 20px;
     padding: 8px;
     text-decoration: none;
@@ -79,13 +75,21 @@ nav > a {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.3s ease-in-out;
 }
 
-/* Efek hover biar menarik */
-nav > a:hover {
+/* Hover efek */
+.nav-menu a:hover {
     background-color: skyblue;
     color: white;
-    transition-duration: 250ms;
+}
+
+/* === BURGER MENU STYLING === */
+/* Ikon burger */
+.burger-menu {
+    font-size: 28px;
+    cursor: pointer;
+    display: none; /* Default hidden */
 }
 
 /* === Styling Main-banner === */
@@ -112,17 +116,18 @@ nav > a:hover {
     margin-top: 10px;
 }
 
-/* Container buat gambar di banner */
+/* Container utama */
 .banner-container {
-    width: 100%;
-    max-width: 1366px;
-    height: 578px;
     position: relative;
+    width: 100%;
+    height: 578px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     border-radius: 10px;
 }
 
-/* Gambar banner yang bisa di slide otomatis */
 .banner-img {
     width: 1366px;
     height: 578px;
@@ -130,11 +135,9 @@ nav > a:hover {
     background-size: cover;
     border-radius: 10px;
     position: absolute;
-    opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
-/* Biar gambar yang aktif kelihatan */
 .banner-img.active {
     opacity: 1;
 }
@@ -357,16 +360,6 @@ nav > a:hover {
 /* === Responsiveness === */
 /* Untuk tablet */
 @media (max-width: 768px) {
-    .main-header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .main-banner {
         width: 100%;
         margin: 100px auto;
@@ -376,6 +369,7 @@ nav > a:hover {
     .profile-container,
     .achievement-container,
     .message-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -389,6 +383,46 @@ nav > a:hover {
 
 /* Untuk smartphone */
 @media (max-width: 480px) {
+    .main-header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+        
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Sembunyikan navigasi utama */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    /* Tampilkan navigasi saat aktif */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Navigasi menu dalam mode burger */
+    .nav-menu a {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .logo-container {
+        gap: 5px;
+    }
+
     .main-logo {
         width: 40px;
         height: 40px;
@@ -410,8 +444,20 @@ nav > a:hover {
         width: 95%;
     }
 
+    .banner-img {
+        width: 400px;
+        height: 578px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
     .banner-title {
         font-size: 16px;
+    }
+
+    .achievement-container {
+        width: 90%;
     }
 
     .profile-title,
@@ -428,6 +474,20 @@ nav > a:hover {
     }
 
     .message-form {
-        width: 100%;
+        width: 190%;
+    }
+
+    .message-form, 
+    .form-group>input {
+        width: 200%;
+    }
+
+    .message-result {
+        margin-top: 130px;
+        width: 200%;
+    }
+
+    .main-footer {
+        margin-top: 420px;
     }
 }

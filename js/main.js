@@ -16,33 +16,35 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-
-// Ini daftar gambar buat banner yang bakal di-slide otomatis
-const images = [
-    "../assets/banner-img/images-1.jpg",
-    "../assets/banner-img/images-2.jpg",
-    "../assets/banner-img/images-3.jpg",
-    "../assets/banner-img/images-4.jpg"
-];
-
-let currentIndex = 0; // Buat nyimpen index gambar yang lagi ditampilin
-const banner = document.querySelector(".banner-img"); // Ambil elemen banner biar bisa diubah gambarnya
-
-// Fungsi buat ganti gambar secara otomatis
-function changeImage() {
-    banner.style.backgroundImage = `url(${images[currentIndex]})`; // Set gambar sesuai index sekarang
-    banner.classList.add("active"); // Tambahin efek fade-in
-
-    setTimeout(() => {
-        banner.classList.remove("active"); // Hapus efek fade-in biar transisi halus
-    }, 3000); // Efek ilangin gambar setelah 3 detik
-
-    currentIndex = (currentIndex + 1) % images.length; // Biar gambar looping terus, balik ke awal pas udah di akhir
+function toggleMenu() {
+    const navMenu = document.querySelector(".nav-menu");
+    navMenu.classList.toggle("active"); // Toggle class 'active'
 }
 
-// Set interval buat ganti gambar tiap 4 detik
-setInterval(changeImage, 4000);
-changeImage(); // Panggil sekali biar gambar pertama langsung muncul
+const images = [
+    "./assets/banner-img/images-1.jpg",
+    "./assets/banner-img/images-2.jpg",
+    "./assets/banner-img/images-3.jpg",
+    "./assets/banner-img/images-4.jpg"
+];
+
+let index = 1;
+const banner = document.querySelector(".banner-img");
+
+function changeImage() {
+    banner.style.opacity = 0; // Menghilangkan gambar dulu
+    setTimeout(() => {
+        banner.style.backgroundImage = `url(${images[index]})`;
+        banner.style.opacity = 1; // Munculkan gambar baru
+        index = (index + 1  ) % images.length;
+    }, 500); // Delay efek transisi
+}
+
+setInterval(changeImage, 3000); // Ganti gambar setiap 3 detik
+
+// Inisialisasi gambar pertama
+banner.style.backgroundImage = `url(${images[0]})`;
+
 
 // Fungsi buat handle submit form tanpa reload halaman
 function submitForm(event) {
