@@ -357,7 +357,7 @@ html {
     color: darkslategray;
 }
 
-/* === Responsiveness === */
+/* === Styling Responsive === */
 /* Untuk tablet */
 @media (max-width: 768px) {
     .main-banner {
@@ -395,7 +395,6 @@ html {
         cursor: pointer;
     }
 
-    /* Sembunyikan navigasi utama */
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -408,12 +407,10 @@ html {
         padding: 10px 0;
     }
 
-    /* Tampilkan navigasi saat aktif */
     .nav-menu.active {
         display: flex;
     }
 
-    /* Navigasi menu dalam mode burger */
     .nav-menu a {
         width: 100%;
         padding: 12px;
