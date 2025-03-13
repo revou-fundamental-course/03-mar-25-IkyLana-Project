@@ -440,7 +440,7 @@ html {
         margin: 50px auto;
         margin-top: 150px;
         padding: 10px;
-        width: 95%;
+        width: 100%;
     }
 
     .banner-img {
@@ -456,7 +456,7 @@ html {
     }
 
     .achievement-container {
-        width: 90%;
+        width: 100%;
     }
 
     .profile-title,
@@ -487,7 +487,7 @@ html {
     }
 
     .main-footer {
-        width: 100%;
+        width: 110%;
         margin-top: 420px;
     }
 }
